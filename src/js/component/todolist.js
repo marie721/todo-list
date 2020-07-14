@@ -82,23 +82,25 @@ export function Todolist() {
 	}
 
 	return (
-		<div className="container">
+		<div className="container-fluid text-center">
 			<h1>{"todos"}</h1>
-			<div className="col-8">
+
+			<div className="col-6 mb-2 m-auto">
 				<input
-					className="form-control"
+					className="form-control "
 					type="text"
 					placeholder="add a task"
 					onChange={handleChange}
 					value={newTask}
 					onKeyPress={handleEnter}
 				/>
+
 				<ul>
 					{tasks.map((task, index) => {
 						return (
 							<div
 								key={index}
-								className="d-flex justify-content-between">
+								className=" d-flex justify-content-between p-2">
 								<li>{task.label}</li>
 								<i
 									className="fas fa-trash"
